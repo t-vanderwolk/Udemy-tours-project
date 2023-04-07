@@ -40,6 +40,18 @@ if (isLoading){
     <Loading />
   </main>
 };
+if (tours.length=== 0) {
+  return (
+    <main>
+      <div className="title">
+
+      </div>
+      <h2>no tours left
+        <button type="button" style={{marginTop:'2rem'}} className='btn' onClick={()=>fetchTours()}> refresh</button>
+      </h2>
+    </main>
+  )
+}
 return <main>
      <Tours tours={tours} removeTour={removeTour} />
 </main>
